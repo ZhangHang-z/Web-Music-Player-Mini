@@ -1,0 +1,428 @@
+.zm_display {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/* ------ 音乐播放器 -----*/
+#side_player_plugin {
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    width: auto;
+    height: auto;
+    z-index: 999999;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+
+#side_player_plugin::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#sidebar_slide_hidden {
+    width: auto;
+    float: left;
+    padding: 0px 5px;
+    height: 110px;
+    background-color: #383838;
+}
+
+#sidebar_slide_hidden:hover {
+    cursor: pointer;
+}
+
+.sidebar_slide_icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 110px;
+}
+
+
+.player_ever {
+    width: auto;
+    height: auto;
+}
+
+#player_container {
+    float: left;
+    background-color: #000;
+    overflow: hidden;
+    opacity: 0.9;
+    display: block;
+}
+
+.p_i_c_two {
+    width: auto;
+    height: 90px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.play_real_section {
+    float: left;
+}
+
+#rotation_cover_picture {
+    width: auto;
+    height: 100%;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+#player_music_cover_picture {
+    max-height: 90px;
+    height: 90px;
+    border-radius: 100%;
+}
+
+
+.play_cov_rotation_paused {
+    animation-play-state:paused;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+}
+
+.play_cov_rotation {
+    animation: rotation_cov 15s infinite linear;
+    -webkit-animation: rotation_cov 15s infinite linear;
+    -moz-animation: rotation_cov 15s infinite linear;
+    -o-animation: rotation_cov 15s infinite linear;
+}
+
+@keyframes rotation_cov {
+    from {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+
+#music_info_area {
+    width: 150px;
+    height: 90px;
+}
+
+.m_name_sty {
+    color: #fff;
+    font-weight: 400;
+}
+
+.m_other_sty {
+    color: #8C8C8C;
+    font-style: normal;
+}
+
+.xiami {
+    color: #F8801C;
+}
+
+.music_i_ever {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+#player_controller {
+    width: 400px;
+    height: 90px;
+    position: relative;
+}
+
+#player_controller::after {
+    content: "";
+    clear: both;
+    display: inline-block;
+}
+
+
+/* ----- 歌词按钮区域 start ---- */
+#player_toolkit_controller {
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.music_play_sty {
+    font-size: 20px;
+    color:  #7D7D7D;
+}
+
+.music_play_sty:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+#zm_music_play_list {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#zm_music_play_lyric {
+    font-style: normal;
+}
+/* ---- 歌词按钮区域 end ---- */
+
+
+#player_button_area {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 20px;
+}
+
+#player_button_area::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.player_step_up_down {
+    font-size: 28px;
+}
+
+.player_step {
+    color: #8B8682;
+    vertical-align: middle;
+}
+
+.p_step_block {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.p_s_b_1 {
+    width: 30px;
+}
+.p_s_b_2 {
+    width: 50px;
+}
+
+
+.player_step:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.player_step_play {
+    font-size: 40px;
+}
+
+.player_step_volume {
+    font-size: 20px;
+    color: #8B8682;
+}
+
+/* 音量条 */
+.zm_volume_line {
+    width: 100px;
+    height: 3px;
+    background-color: #7D7D7D;
+    vertical-align: middle;
+    position: relative;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+#zm_slide_change_volume{
+    width: 10px;
+    height: 10px;
+    background-color: #F08026;
+    border-radius: 100%;
+    float: left;
+    position: absolute;
+    left: 40%;
+    top: -3px;
+    box-shadow: 0px 0px 4px 4px rgba(240,128,38,0.4);
+}
+
+#zm_slide_change_volume:hover {
+    cursor: pointer;
+}
+
+
+/* 当前音量条 */
+#zm_current_volume_line{
+    height: 100%;
+    width: 40%;
+    background-color: #F08026;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+/*  歌词区域  */
+#side_lyric {
+    float: right;
+    width: 180px;
+    height: 110px;
+    background-color: #000000;
+    margin-left: 2px;
+    opacity: 0.7;
+    border-radius: 3px;
+    position: relative;
+    display: none;
+}
+
+#close_lyric_icon {
+    font-size: 15px;
+    position: absolute;
+    right: 3px;
+    top: 2px;
+    color: #fff;
+}
+
+#close_lyric_icon:hover {
+    cursor: pointer;
+}
+
+
+
+/* -- 播放列表 --*/
+#zm_play_list {
+    width: 700px;
+    height: 300px;
+    background-color: #181818;
+    opacity: 0.9;
+    position: fixed;
+    left: 0;
+    bottom: 140px;
+    display: block;
+    overflow: hidden;
+}
+
+.zm_plist_title_box {
+    width: 100%;
+    height: auto;
+}
+
+.zm_p_l_select {
+    width: auto;
+    height: 39px;
+    line-height: 39px;
+    float: left;
+    margin-left: 30px;
+    cursor: pointer;
+    color: #fff
+}
+
+.zm_p_l_name {
+    font-size: 16px;
+    color: inherit;
+}
+
+.zm_p_current {
+    border-bottom: 2px solid #F08026;
+}
+
+.zm_p_l_t {
+    height: 40px;
+    border-bottom: 1px solid #8C8C8C;
+}
+
+.zm_plist_box  {
+    width: 100%;
+    height: 259px;
+}
+
+#zm_plist_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.zm_p_list {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #848484;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.zm_list_ever {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#zm_current_play_list {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#zm_hot_play_list {
+    position: absolute;
+    right: -700px;
+    top: 0;
+}
+
+
+
+.zm_l_hover {
+    background-color: #000000;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.zm_p_e {
+    height: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    vertical-align: top;
+    color: inherit;
+}
+
+.zm_p_l_title {
+    width: 50%;
+    text-indent: 20px;
+}
+
+.zm_p_l_signer {
+    width: 25%;
+    height: 100%;
+}
+
+/* 关闭按钮 */
+#close_playlist_icon {
+    font-size: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+}
+
+#close_playlist_icon:hover {
+    cursor: pointer;
+}
+
+
+.zm_play_current {
+    color: #F08B3A;
+}
